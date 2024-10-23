@@ -3,7 +3,7 @@ import React from "react";
 const ImageComponent = () => {
 
     return (
-        <div className="image-container">
+        <div className="image-container image-background-1">
             <h1>Consultorio Odontológico</h1>
             <h2>Promoción</h2>
 

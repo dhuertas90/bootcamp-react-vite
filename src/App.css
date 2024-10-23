@@ -1,3 +1,9 @@
+/* Estilos globales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,48 +11,65 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
+/* Estilos para ImageComponent */
 .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   text-align: center;
+  width: 100%; /* O el ancho que desees para el contenedor */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex: 1; /* Permite que el contenedor ocupe todo el espacio disponible */
+  position: relative; /* Permite que los elementos hijos se posicionen en relación con este contenedor */
+  margin: 0 auto; /* Centra el contenedor si es más estrecho que la ventana */
+  padding: 20px; /* Agrega un poco de espacio interno */
+  border-radius: 10px; /* Bordes redondeados para el contenedor */
+  overflow: hidden; /* Para ocultar el contenido que excede el contenedor */
 }
 
+.image-container img {
+  height: auto;
+  max-height: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Banner contenedor */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Imágenes dentro del banner */
+.banner-image {
+  .banner-image {
+    max-height: 100%;
+    width: auto;
+    height: 50px;
+    object-fit: contain; /* Ajusta la imagen para que respete su proporción */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Estilos para los encabezados en los componentes */
 .image-container h1,
 .image-container h2 {
   color: white;
@@ -65,8 +88,28 @@
   margin: 10px 0;
 }
 
-.image-container img {
-  max-width: 50%;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.image-container::before {
+  content: ""; /* Necesario para crear un pseudo-elemento */
+  position: absolute; /* Posiciona el elemento en relación con el contenedor */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/ruta/a/tu/imagen_de_fondo.jpg'); /* Cambia esto a la ruta de tu imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  opacity: 0.1; /* Opacidad del fondo */
+  z-index: 1; /* Coloca el fondo detrás del contenido */
+}
+
+.image-background-1::before {
+  background-image: url('/public/images/fondo-ciudad.jpg');
+}
+
+.image-background-2::before {
+  background-image: url('/public/images/fondo-consultorio.PNG'); 
+}
+
+.image-background-3::before {
+  background-image: url('/public/images/fondo-estacion.jpg');
 }
