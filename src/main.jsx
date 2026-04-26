@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
-    <App />
-)
+    <StrictMode> {/* Envolver la aplicación en StrictMode para activar comprobaciones adicionales en desarrollo */}
+        <App /> {/* Renderiza el componente App como el componente raíz de la aplicación */}
+    </StrictMode>,
+);
 
