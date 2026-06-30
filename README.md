@@ -1,4 +1,7 @@
 # Proyecto Inicial con REACT + VITE
+
+La interfaz del proyecto React por defecto puede cambiar con el tiempo.
+
 0. Instalar Node en tu máquina.
 1. Instalar Vite y configurar el proyecto
     Abrí una terminal y ejecutá el siguiente comando para crear un proyecto nuevo con Vite:
